@@ -1,12 +1,15 @@
+version: "3.8"
+
 services:
-  nextjs:
+  scriptify_frontend:
     build: .
+    container_name: scriptify_frontend
     restart: always
-    ports:
-      - "3001:3000"
+    expose:
+      - "3000"
     networks:
-      - app_network
+      - web
 
 networks:
-  app_network:
-    driver: bridge
+  web:
+    external: true
