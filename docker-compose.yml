@@ -1,11 +1,10 @@
-version: "3.8"
-
 services:
   scriptify_frontend:
     build: .
     container_name: scriptify_frontend
     restart: always
-    env_file: .env
+    environment:
+      - RESEND_API_KEY=${RESEND_API_KEY:-}
     ports:
       - "3001:3000"
     networks:
