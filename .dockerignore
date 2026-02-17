@@ -1,0 +1,38 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build
+.next
+out
+dist
+build
+
+# Git
+.git
+.gitignore
+
+# IDE / OS
+.idea
+.vscode
+*.swp
+.DS_Store
+Thumbs.db
+
+# Env (injecté au runtime via docker-compose, pas dans l'image)
+.env
+.env*.local
+.env.development
+.env.production
+
+# Logs / tests
+npm-debug.log*
+.yarn
+coverage
+*.test.*
+*.spec.*
+
+# Documentation (optionnel)
+README.md
+DEPLOY.md
