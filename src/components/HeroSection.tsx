@@ -59,7 +59,7 @@ export default function HeroSection() {
               variants={itemVariants}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-green"
             >
-              Le code qu'il vous fallait
+              Digitalisez aujourd’hui. Dominez demain.
             </motion.h1>
             <motion.p
               variants={itemVariants}

@@ -7,7 +7,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Scriptify - Le code qu'il vous fallait",
+  title: "Scriptify - Digitalisez aujourd’hui. Dominez demain.",
   description:
     "Services de développement web, mobile, community management et IA",
 };
