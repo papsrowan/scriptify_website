@@ -241,7 +241,7 @@ export default function Footer() {
 
         <div className="text-center text-gray-500 dark:text-gray-400 text-sm">
           <p>© {currentYear} Scriptify. Tous droits réservés.</p>
-          <p className="mt-2">Digitalisez aujourd’hui. Dominez demain...</p>
+          <p className="mt-2">Digitalisez aujourd’hui. Dominez demain.</p>
         </div>
       </div>
     </footer>
