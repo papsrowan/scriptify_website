@@ -14,12 +14,18 @@ Ce document explique pourquoi le site peut ne pas apparaître tout de suite sur 
 
 ## Ce qui a été mis en place dans le projet
 
-- **Métadonnées** : titre, description, mots-clés, langue `fr`.
+- **Métadonnées complètes** : titre, description, mots-clés, langue `fr`.
 - **Open Graph et Twitter** : pour un bon affichage quand le lien est partagé (réseaux sociaux).
 - **URL canonique** : `https://scriptify.cm` pour éviter le contenu dupliqué.
-- **Sitemap** : `https://scriptify.cm/sitemap.xml` pour indiquer les pages à indexer.
-- **robots.txt** : `https://scriptify.cm/robots.txt` qui autorise l’indexation et indique l’URL du sitemap.
+- **Sitemap amélioré** : `https://scriptify.cm/sitemap.xml` incluant :
+  - Page d'accueil (priorité 1.0)
+  - Section Services (#services, priorité 0.8)
+  - Section Réalisations (#realisations, priorité 0.8)
+  - Section Équipe (#equipe, priorité 0.7)
+  - Section Contact (#contact, priorité 0.9)
+- **robots.txt** : `https://scriptify.cm/robots.txt` qui autorise l'indexation et indique l'URL du sitemap.
 - **Données structurées (JSON-LD)** : schéma Organization pour que Google comprenne mieux qui vous êtes.
+- **Middleware de sécurité** : protection contre les attaques tout en permettant l'indexation.
 
 ---
 
@@ -50,11 +56,21 @@ Ce document explique pourquoi le site peut ne pas apparaître tout de suite sur 
 - Saisissez `https://scriptify.cm`.
 - Cliquez sur **Demander une indexation** (si le statut n’est pas déjà “Indexée”). Cela accélère la prise en compte.
 
-### 3. Vérifier que le site est accessible
+### 3. Surveiller les performances
 
-- Le site doit être en **HTTPS** (déjà le cas avec scriptify.cm si SSL est configuré).
-- Aucune page importante ne doit renvoyer **403** ou **404**.
-- Le **robots.txt** ne doit pas bloquer Google (la config actuelle autorise tout le site et interdit seulement `/api/`).
+- Dans Search Console, allez dans **Performances** pour voir :
+  - Mots-clés sur lesquels vous apparaissez
+  - Clics et impressions
+  - Pages les plus populaires
+
+### 4. Améliorations récentes apportées
+
+- **Sitemap étendu** : ajout des sections principales (#services, #realisations, #equipe, #contact) avec priorités appropriées
+- **Fréquences de mise à jour** : page d'accueil hebdomadaire, sections mensuelles
+- **Middleware optimisé** : protection sécurité sans bloquer les crawlers
+- **Build validé** : sitemap généré correctement en production
+
+---
 
 ### 4. (Recommandé) Image Open Graph dédiée
 
