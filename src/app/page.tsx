@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import VisionSection from "@/components/VisionSection";
+import PDGSection from "@/components/PDGSection";
 import RealisationsSection from "@/components/RealisationsSection";
 import TeamSection from "@/components/TeamSection";
 import ContactSection from "@/components/ContactSection";
@@ -14,6 +16,8 @@ export default function Home() {
         <Navbar />
       </Suspense>
       <HeroSection />
+      <VisionSection />
+      <PDGSection />
       <ServicesSection />
       <RealisationsSection />
       <TeamSection />

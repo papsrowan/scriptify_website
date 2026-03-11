@@ -12,9 +12,10 @@ import { motion } from "framer-motion";
 
 const navLinks = [
   { href: "#services", label: "Services" },
+  { href: "#vision", label: "Vision" },
+  { href: "#pdg", label: "À propos" },
   { href: "#realisations", label: "Réalisations" },
   { href: "#team", label: "Équipe" },
-  { href: "#pricing", label: "Tarifs" },
   { href: "#contact", label: "Contact" },
 ];
 

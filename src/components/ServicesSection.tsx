@@ -21,7 +21,6 @@ import Image from "next/image";
 
 type ServiceItem = {
   name: string;
-  price: string;
   description: string;
   features: string[];
   image?: string;
@@ -44,7 +43,6 @@ const services: ServiceCategory[] = [
     items: [
       {
         name: "Entrée Digitale",
-        price: "150 000 FCFA",
         description: "Site WordPress classique avec services de base",
         image: "/images/services/web/entry-digitale.jpg",
         features: [
@@ -58,7 +56,6 @@ const services: ServiceCategory[] = [
       },
       {
         name: "Plat Principal Web",
-        price: "750 000 FCFA",
         description: "Site web entièrement personnalisé avec maintenance",
         image: "/images/services/web/plat-principal-web.jpg",
         features: [
@@ -68,9 +65,9 @@ const services: ServiceCategory[] = [
           "Cahier des charges inclus",
         ],
       },
+
       {
         name: "Expérience Prestige",
-        price: "1 800 000 FCFA",
         description: "Solution de haute qualité pour projets d'envergure",
         image: "/images/services/web/experience-prestige.jpg",
         features: [
@@ -83,6 +80,7 @@ const services: ServiceCategory[] = [
           "Guide d'utilisation et vidéo explicative",
         ],
       },
+
     ],
   },
   {
@@ -94,7 +92,6 @@ const services: ServiceCategory[] = [
     items: [
       {
         name: "Pack 'Visibilité Express'",
-        price: "150 000 FCFA",
         description:
           "Campagne publicitaire ciblée pour acquérir de nouveaux clients",
         image: "/images/services/marketing/visibilite-express.jpg",
@@ -104,9 +101,9 @@ const services: ServiceCategory[] = [
           "Analyse des performances et ajustements",
         ],
       },
+
       {
         name: "Pack 'SEO Boost'",
-        price: "250 000 FCFA",
         description: "Optimisation pour les moteurs de recherche",
         image: "/images/services/marketing/seo-boost.jpg",
         features: [
@@ -115,9 +112,9 @@ const services: ServiceCategory[] = [
           "Création de contenus optimisés (3 articles ou pages)",
         ],
       },
+
       {
         name: "Pack 'Community Management'",
-        price: "à partir de 350 000 FCFA",
         description: "Gestion professionnelle de vos réseaux sociaux",
         image: "/images/services/marketing/community-management.jpg",
         features: [
@@ -127,6 +124,7 @@ const services: ServiceCategory[] = [
           "Analyse et reporting mensuel",
         ],
       },
+
     ],
   },
   {
@@ -138,7 +136,6 @@ const services: ServiceCategory[] = [
     items: [
       {
         name: "Menu 'Entrée Digitale Boostée'",
-        price: "250 000 FCFA",
         description: "Site web basique avec campagne publicitaire",
         image: "/images/services/combined/entry-digitale-boostee.jpg",
         features: [
@@ -146,9 +143,9 @@ const services: ServiceCategory[] = [
           "Pack 'Visibilité Express' (publicité Facebook & Instagram 1 mois)",
         ],
       },
+
       {
         name: "Menu 'Plat Principal Web & Visibilité'",
-        price: "900 000 FCFA",
         description: "Site personnalisé avec stratégie de visibilité",
         image: "/images/services/combined/plat-principal-web-visibilite.jpg",
         features: [
@@ -157,9 +154,9 @@ const services: ServiceCategory[] = [
           "Stratégie SEO de base",
         ],
       },
+
       {
         name: "Menu 'Expérience Prestige & Impact'",
-        price: "2 500 000 FCFA",
         description: "Solution complète haut de gamme",
         image: "/images/services/combined/experience-prestige-impact.jpg",
         features: [
@@ -169,6 +166,7 @@ const services: ServiceCategory[] = [
           "Gestion des réseaux sociaux (2 mois)",
         ],
       },
+
     ],
   },
   {
@@ -180,7 +178,6 @@ const services: ServiceCategory[] = [
     items: [
       {
         name: "Pack 'IA Chatbot Business'",
-        price: "500 000 FCFA",
         description: "Chatbot intelligent pour site web et réseaux sociaux",
         image: "/images/services/ai/ia-chatbot-business.jpg",
         features: [
@@ -190,9 +187,9 @@ const services: ServiceCategory[] = [
           "Personnalisation des scénarios de conversation",
         ],
       },
+
       {
         name: "Pack 'SEO & Contenu IA'",
-        price: "600 000 FCFA",
         description: "Génération automatique d'articles optimisés pour le SEO",
         image: "/images/services/ai/seo-contenu-ia.jpg",
         features: [
@@ -202,9 +199,9 @@ const services: ServiceCategory[] = [
           "Optimisation continue basée sur l'analyse du trafic",
         ],
       },
+
       {
         name: "Pack 'E-commerce IA'",
-        price: "1 200 000 FCFA",
         description: "Solutions IA pour boutiques en ligne",
         image: "/images/services/ai/e-commerce-ia.jpg",
         features: [
@@ -214,6 +211,7 @@ const services: ServiceCategory[] = [
           "Analyse avancée des ventes et des tendances",
         ],
       },
+
     ],
   },
 ];
@@ -332,9 +330,7 @@ export default function ServicesSection() {
                           <CardDescription className="text-lg mt-1">
                             {item.description}
                           </CardDescription>
-                          <p className="text-2xl font-bold mt-2 text-primary dark:text-secondary">
-                            {item.price}
-                          </p>
+
                         </CardHeader>
                         <CardContent className="flex-grow pb-6">
                           <ul className="space-y-2">

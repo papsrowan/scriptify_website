@@ -12,13 +12,15 @@ import {
 } from "./ui/card";
 import { Button } from "./ui/button";
 import { ExternalLink, Wallet } from "lucide-react";
+import Image from "next/image";
 
 type Realisation = {
   id: string;
   title: string;
   description: string;
   url: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
+  logo?: string; // path to a logo image in public folder
   tags?: string[];
 };
 
@@ -29,7 +31,8 @@ const realisations: Realisation[] = [
     description:
       "Plateforme de collecte journalière pour microfinances : suivi des versements, retraits et comptes clients, tableaux de bord en temps réel et application mobile pour les agents sur le terrain.",
     url: "https://collecta.finance/",
-    icon: <Wallet className="h-8 w-8" />,
+    // use logo instead of icon for a nicer presentation
+    logo: "/images/collecta.png",
     tags: ["Web", "Mobile", "Microfinance"],
   },
 ];
@@ -98,7 +101,17 @@ export default function RealisationsSection() {
                 <CardHeader className="pb-2">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 text-primary dark:bg-brand-green/20 dark:text-brand-green">
-                      {realisation.icon}
+                      {realisation.logo ? (
+                        <Image
+                          src={realisation.logo}
+                          alt={`${realisation.title} logo`}
+                          width={56}
+                          height={56}
+                          className="object-contain"
+                        />
+                      ) : (
+                        realisation.icon
+                      )}
                     </span>
                     <CardTitle className="text-xl border-border border-b-2 pb-1 w-fit">
                       {realisation.title}
